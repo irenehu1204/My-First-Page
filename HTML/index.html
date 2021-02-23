@@ -1,0 +1,88 @@
+<!--Mark that you are using html5-->
+<!DOCTYPE html>
+<!--Change the language to English-->
+<html lang="en">
+<!--注意:<head>是整个文档的开头设置，主要起到设置和设置窗口名称和icon的作用而不起title的作用。
+         而<header>起到文档或者某个部分的页眉(title)的作用-->
+<head>
+  <meta charset="UTF-8">
+  <title>My First Page</title>
+  <!--rel="icon"是统一的，href=""中间添加的是icon的地址名字-->
+  <link rel="icon" href="photos/california.jpg">
+</head>
+<!--文档中只有haed和body两部分，把所有文档要呈现的内容全部放在body中-->
+<body>
+  <p><h3>Bowen Hu's Personal Website</h3></p>
+  <figure>
+    <img src="photos/Professional Photo.jpg" width=10% alt="photos/微信图片_20200114235239.jpg">
+    <figcaption>My Professional Photo</figcaption>
+  </figure>
+  <!--添加一个链接，使用<a 作为anchor, href后添加网址>后添加链接显示的名字-->
+  <!--此方法为absolute link,添加的为外部链接-->
+  <!--target="_self"就是在当前网页界面跳转新网页，target="_blank"是跳转网页时打开一个新的窗口-->
+  <p>I graduated from
+  <a href="https://umich.edu" target="_self">University of Michigan</a></p>
+  <!--插入一个video。用control可以让读者自己掌控进度条，添加loop视频会循环播放-->
+  <p>Here is the Football game winter 2019 between U of M and OSU</p>
+  <video src="photos/Michigan Football.mp4" width=20% controls loop>
+    Your Browser doesn't support the <code>Video</code> element.
+  </video>
+  <!--使用<audio>添加一个audio并且可以通过#t=来设定开始时间-->
+  <p>Here is an audio of my internship in RunningTooth</p>
+  <audio src="photos/福星惠誉·福星城南区 2.m4a#t=15:10" controls>
+    The audio is set to start from the point I want it to start</audio>
+  <!--使用relative link从本机导入链接-->
+  <!--也可以将链接的名字设置为一个图片，直接将<img...>插入即可。点击图片跳转另一个界面-->
+  <p>I went to <a href="CA photos.html" target="_blank">CA Route #1</a> Christmas 2019</p>
+  <p>Here is My Educational Experience</p>
+  <!--下面新建一个表格。border="1"表示给表格添加一个边框(default就是border="0"就是没有边框)-->
+  <!-- <tr>表示table row,新建一个row,<th>表示table heading,新建表头里面的单个单元格, <td>表示table data, 新建表里面的单个单元格-->
+  <!-- rowspan="2"就是这一个单元格占两行-->
+  <table border="1">
+    <tr>
+      <th>Education Level</th><th>Institution name</th></tr>
+    <tr>
+      <td>Post Graduate</td><td>Columbia University</td></tr>
+    <tr>
+      <td rowspan="2">Colledge</td><td>University of Michigan</td></tr>
+      <tr><td>Macau University of Michigan</td></tr>
+    <tr>
+        <td>High School</td><td>No.6 High School</td></tr>
+   </table>
+   <br>
+   <p>Following are some block elements in HTML5</p>
+   <!--<br>标签表示换行-->
+   <!--<details>和<div>,<p>等一样都是block tag,但details有一个功能:只展现<summary>标题中的内容，而页面中点击summsry标题才会展现底下<p>中的内容
+      如果设置成<details open>的话底下的内容就是可见的
+      不过<details>标签只适用于chrome和safari浏览器-->
+   <br>
+   <details>
+     <summary>Places I wanna go</summary>
+     <p>巴伐利亚，布达佩斯，布拉格，冰岛...</p></details>
+   <!--使用<nav>兴建一个导航栏-->
+     <br>
+     <nav>
+  <a href="/html/">HTML</a> |
+  <a href="/css/">CSS</a> |
+  <a href="/js/">JavaScript</a> |
+  <a href="/jquery/">jQuery</a>
+</nav>
+<br>
+<p>Following are some inline tags in HTML5</p>
+  <!--使用<span>可以在inline的条件下对一句话的某些部分进行形式上的变化，如颜色等-->
+  <p>我的母亲有 <span style="color:blue">蓝色</span> 的眼睛。</p>
+  <!--使用<cite>可以显示一句话中引用的部分，可以是链接也可以是书名等-->
+  <p><cite>https://umich.edu</cite> by Edward Munch. Painted in 1893.</p>
+  <!--使用<abbr>显示缩写的效果，将鼠标悬浮于缩写上会显示全称-->
+  <p>The days of the week are often abbreviated <abbr title="Sunday">Sun</abbr>, <abbr title="Monday">Mon</abbr>, <abbr title="Tuesday">Tue</abbr>, etc.</p>
+  <!--<time>tag是使用时间时使用的，暂且没有什么好处，但有利于计算机识别并在javascript中提高速度和识别度-->
+  <p>我们在每天早上 <time>9:00</time> 开始营业。</p>
+  <!--<sub>可以将字符排版到下半格，而<sup>可以将字符排版到上半格-->
+  <p>这个文本包含 <sub>下标</sub>文本。H<sub>2</sub>O</p>
+  <p>这个文本包含 <sup>上标</sup> 文本。(X+3)<sup>2</sup></p>
+  <!--<code>可以将一句话中的代码显示为代码形式-->
+  <p>We use <code>def</code> to define a function in Python</p>
+
+<footer>Thinking of a more interesting footer</footer>
+</body>
+<html>
